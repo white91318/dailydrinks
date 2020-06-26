@@ -80,7 +80,7 @@ class Drinklist extends Component {
                     {isEditing && d.id == EditingItem ? <textarea value={isTyping?this.state.note:d.note} onChange={this.handleDrinksNoteChange} /> : d.note}
                 </span>
                 <span id={d.id} className='del-button' onClick={this.onDelete}>刪除</span>
-                <span id={d.id} className='edit-button' onClick={isEditing?this.onUpdate:this.onEdit}>{isEditing ? "更新" : "修改" }</span>
+                <span id={d.id} className='edit-button' onClick={isEditing?this.onUpdate:this.onEdit}>{isEditing && d.id == EditingItem ? "更新" : "修改" }</span>
             </div>
         })
     return<div>
